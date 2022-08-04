@@ -1,0 +1,4 @@
+node {
+      stage 'Code Fetch'
+          echo 'hello'
+      }
