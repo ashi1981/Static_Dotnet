@@ -1,6 +1,6 @@
 node {
       stage 'Code Fetch'
             git branch: 'main', url: 'https://github.com/ashi1981/Static_Dotnet.git'    
-      stage
+      stage 'Code Build'
             echo 'hello'
       }
