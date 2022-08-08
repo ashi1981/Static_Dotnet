@@ -12,6 +12,6 @@ node {
         echo 'hello'
         sleep 20
     stage 'Restart IIS' 
-        bat 'Windows\\System32\\iisreset.exe'
+        bat 'C:\\Windows\\System32\\iisreset.exe'
         sleep 10
       }
