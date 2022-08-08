@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\test</_PublishTargetUrl>
-    <History>True|2022-08-03T20:08:52.0772656Z;</History>
+    <History>True|2022-08-08T14:40:48.8520130Z;True|2022-08-03T13:08:52.0772656-07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
@@ -162,10 +162,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/02/2022 19:56:23</publishTime>
     </File>
     <File Include="bin/StaticWebsiteMVC.dll">
-      <publishTime>08/03/2022 13:08:47</publishTime>
+      <publishTime>08/08/2022 07:40:46</publishTime>
     </File>
     <File Include="bin/StaticWebsiteMVC.pdb">
-      <publishTime>08/03/2022 13:08:47</publishTime>
+      <publishTime>08/08/2022 07:40:46</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>08/02/2022 19:56:22</publishTime>
@@ -228,10 +228,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/02/2022 19:56:22</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>08/02/2022 19:56:22</publishTime>
+      <publishTime>08/08/2022 07:29:51</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/02/2022 19:56:22</publishTime>
+      <publishTime>08/08/2022 07:31:40</publishTime>
     </File>
     <File Include="Views/Shared/_Footer.cshtml">
       <publishTime>08/02/2022 19:56:22</publishTime>
@@ -246,7 +246,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/02/2022 19:56:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/03/2022 13:08:51</publishTime>
+      <publishTime>08/08/2022 07:40:48</publishTime>
     </File>
   </ItemGroup>
 </Project>
