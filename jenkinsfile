@@ -3,7 +3,9 @@ node {
             git branch: 'main', url: 'https://github.com/ashi1981/Static_Dotnet.git'    
       stage 'Code Build'
             bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\MSBuild Project\\StaticWebsiteMVC.sln"'
-      stage 'Code Deploy'    
+      stage 'Code Deploy'
+            bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\MSBuild Project\\StaticWebsiteMVC.sln" /p:DeployOnBuild=true /p:PublishProfile="C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\MSBuild Project\\StaticWebsiteMVC\\Properties\\PublishProfiles\\FolderProfile.pubxml'
+      stage 'Code Publish'
             echo 'hello'
             sleep 10
       }
