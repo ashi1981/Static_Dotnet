@@ -1,16 +1,20 @@
 node {
     stage 'Code Fetch'
         git branch: 'main', url: 'https://github.com/ashi1981/Static_Dotnet.git' 
-        sleep 20
+        sleep 10
+    stage 'Code Clean'
+        bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\MSBuild Project\\StaticWebsiteMVC.sln" /t:Clean'
+        sleep 10
     stage 'Code Build'
-        bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\MSBuild Project\\StaticWebsiteMVC.sln"'
+        bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\MSBuild Project\\StaticWebsiteMVC.sln" /t:Rebuild'
         sleep 10
     stage 'Code Deploy'
+        bat 'del C:\\test\\*.*'
         bat '"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe" "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\MSBuild Project\\StaticWebsiteMVC.sln" /p:DeployOnBuild=true /p:PublishProfile="C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\MSBuild Project\\StaticWebsiteMVC\\Properties\\PublishProfiles\\FolderProfile.pubxml'
-        sleep 20
-    stage 'Code Publish/Realse'
+        sleep 10
+    stage 'Code Publish/Release'
         echo 'hello'
-        sleep 20
+        sleep 10
     stage 'Restart IIS' 
         bat 'C:\\Windows\\System32\\iisreset.exe'
         sleep 10
